@@ -1,32 +1,32 @@
-<small>FRONTEND • EXERCISE 11</small>
-# Movie Client (React & Full CRUD)
+# React + TypeScript + Vite
 
-## Project Purpose
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-* Build a React frontend application to communicate with a C# .NET Web API for full movie CRUD operations.
-* Practice and implement single-page application development, state management, and component-based architecture.
+Currently, two official plugins are available:
 
-## Core Technologies
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-* React
-* React Router
-* TypeScript
-* Tailwind CSS
-* Vite
-* REST API / Fetch API
+## React Compiler
 
-## Core Assignment Features
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-* **Read:** Fetch and display a list of movies from the backend API.
-* **Create:** Add new movie records via a form submitted to the API.
-* **Update:** Edit existing movie details through the frontend client.
-* **Delete:** Remove movie records from the database via the API.
-* **Navigation:** Handle multi-page or view transitions seamlessly using React Router.
+## Expanding the Oxlint configuration
 
-## Course Information
-* **Provider:** Lexicon IT-proffs AB / Luleå Tekniska Universitet (LTU)
-* **Class:** Lexicon LTU VT-2026
-* **Track:** Frontend
-* **Course:** React
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-**Tags:** `react`, `react-router`, `typescript`, `tailwind-css`, `vite`, `frontend`, `crud`, `rest-api`, `fetch-api`, `components`, `state-management`, `single-page-application`
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
