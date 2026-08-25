@@ -1,4 +1,5 @@
-# FE Exercise 11: Movie Client (React & Full CRUD)
+<small>FRONTEND • EXERCISE 11</small>
+# Movie Client (React & Full CRUD)
 
 ## Project Purpose
 
